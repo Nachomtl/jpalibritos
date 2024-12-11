@@ -42,8 +42,8 @@ public class MenuPrestamo {
         int usuarioId = scanner.nextInt();
 
         // Buscar los objetos Usuario y Ejemplar por su ID
-        Usuario usuario = memoriaPrestamo.buscarUsuarioPorId(usuarioId);  // Método hipotético para buscar Usuario
-        Ejemplar ejemplar = memoriaPrestamo.buscarEjemplarPorId(libroId);  // Método hipotético para buscar Ejemplar
+        Usuario usuario = memoriaPrestamo.buscarUsuarioPorId(usuarioId);  // Implementa este método en MemoriaPrestamo
+        Ejemplar ejemplar = memoriaPrestamo.buscarEjemplarPorId(libroId);  // Implementa este método en MemoriaPrestamo
 
         if (usuario == null || ejemplar == null) {
             System.out.println("Usuario o ejemplar no encontrado.");
@@ -54,7 +54,7 @@ public class MenuPrestamo {
         Prestamo prestamo = new Prestamo();
         prestamo.setUsuario(usuario);
         prestamo.setEjemplar(ejemplar);
-        prestamo.setFechaInicio(java.time.LocalDate.now());  // Asumir que la fecha de inicio es la actual
+        prestamo.setFechaInicio(java.time.LocalDate.now());
 
         memoriaPrestamo.agregarPrestamo(prestamo);
         System.out.println("Prestamo insertado correctamente");
