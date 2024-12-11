@@ -75,7 +75,7 @@ public class MenuPrestamo {
 
         System.out.println("Introduce el nuevo estado del prestamo (Activo, Devuelto):");
         String estado = scanner.next();
-        prestamo.setEstado(estado);
+        //prestamo.setEstado(estado);
 
         memoriaPrestamo.actualizarPrestamo(prestamo);
         System.out.println("Prestamo actualizado");
