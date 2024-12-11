@@ -42,15 +42,15 @@ public class MenuPrestamo {
         int usuarioId = scanner.nextInt();
 
         // Buscar los objetos Usuario y Ejemplar por su ID
-        Usuario usuario = memoriaPrestamo.buscarUsuarioPorId(usuarioId);  // Implementa este método en MemoriaPrestamo
-        Ejemplar ejemplar = memoriaPrestamo.buscarEjemplarPorId(libroId);  // Implementa este método en MemoriaPrestamo
+        Usuario usuario = memoriaPrestamo.buscarUsuarioPorId(usuarioId);
+        Ejemplar ejemplar = memoriaPrestamo.buscarEjemplarPorId(libroId);
 
         if (usuario == null || ejemplar == null) {
             System.out.println("Usuario o ejemplar no encontrado.");
             return;
         }
 
-        // Crear el préstamo y asignar los objetos completos
+        // Crear el préstamo y asignar los objetos
         Prestamo prestamo = new Prestamo();
         prestamo.setUsuario(usuario);
         prestamo.setEjemplar(ejemplar);
